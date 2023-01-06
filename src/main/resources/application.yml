@@ -1,0 +1,21 @@
+#???https://juejin.cn/post/6844904153047646216
+spring:
+  mail:
+    username: XXXXXXXXX@qq.com
+    password: XXXXXXXXX
+    host: smtp.qq.com
+    port: 465
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          socketFactory:
+            class: javax.net.ssl.SSLSocketFactory
+          port: ${spring.mail.port}
+          auth: true
+          starttls:
+            enable: true
+            required: true
+server:
+  port: 8233
